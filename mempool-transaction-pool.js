@@ -16,7 +16,7 @@ class Mempool {
     this.pendingTransactions.sort((a, b) => b.fee - a.fee);
   }
 
-  // 打包指定数量交易
+  // 打包指定数量 交易
   packTransactions(limit = 10) {
     this.sortByFee();
     const packed = this.pendingTransactions.splice(0, limit);
